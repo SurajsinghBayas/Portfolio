@@ -1091,11 +1091,24 @@ textarea.form-input {
     margin-right: 10px;
 }
 /*MEDIA QUERIES*/
+@media (min-width: 100px) {
+    .skill-item-title {
+        
+        margin-bottom: 10px;
+        margin-left: 140px;
+    }
+}
 
 @media (min-width: 450px) {
     .clients-item { min-width: calc(33.33% - 10px); }
 
     .project-img, .blog-banner-box { height: auto; }
+    .skill-item-title {
+        
+        margin-bottom: 10px;
+        margin-left: 140px;
+    }
+
 }
 
 @media (min-width: 580px) {
@@ -1218,10 +1231,12 @@ textarea.form-input {
 
         .skill-avatar-box img { width: 80px; }
 
-    .skill-item-title {
-        margin-bottom: 10px;
-        margin-left: 95px;
-    }
+        .skill-item-title {
+        
+            margin-bottom: 10px;
+            margin-left: 140px;
+        }
+    
 
     .skill-text {
         line-clamp: 2;
@@ -1341,7 +1356,11 @@ textarea.form-input {
         padding-left: 5px;
         margin-bottom: 30px;
     }
-
+    .skill-item-title {
+        
+        margin-bottom: 10px;
+        margin-left: 140px;
+    }
     .filter-item button {
         color: var(--light-gray);
         font-size: var(--fs5);
@@ -1381,7 +1400,11 @@ textarea.form-input {
         width: max-content;
         margin: auto;
     }
-
+    .skill-item-title {
+        
+        margin-bottom: 10px;
+        margin-left: 140px;
+    }
     .navbar {
         position: absolute;
         bottom: auto;
@@ -1450,7 +1473,11 @@ textarea.form-input {
         width: 75%;
         margin: 0;
     }
-
+    .skill-item-title {
+        
+        margin-bottom: 10px;
+        margin-left: 140px;
+    }
     .sidebar {
         position: sticky;
         top: 60px;
@@ -1496,7 +1523,7 @@ textarea.form-input {
         margin: 15px 0;
         opacity: 0;
     }
-
+    
     .social-list { justify-content: center; }
 
     .timeline-text { max-width: 700px; }

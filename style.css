@@ -450,12 +450,12 @@ article { display: none; }
     line-height: 1.6;
 }
 
-/*TESTIMONIALS*/
+/*skill*/
 
-.testimonials { margin-bottom: 0px; }
-.testimonials-title { margin-bottom: 20px; }
+.skill { margin-bottom: 0px; }
+.skill-title { margin-bottom: 20px; }
 
-.testimonials-list {
+.skill-list {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -469,12 +469,12 @@ article { display: none; }
     scroll-snap-type: inline mandatory;
 }
 
-.testimonials-item {
+.skill-item {
     min-width: 100%;
     scroll-snap-align: center;
 }
 
-.testimonials-avatar-box {
+.skill-avatar-box {
     width: fit-content;
     height: fit-content; /* Add this line to adjust height */
     top: 0;
@@ -486,7 +486,7 @@ article { display: none; }
     padding: 10px; /* Add padding to increase size */
 }
 
-.testimonials-text {
+.skill-text {
     color: var(--light-gray);
     font-size: var(--fs6);
     font-weight: var(--fw300);
@@ -523,7 +523,7 @@ article { display: none; }
         visibility: visible;
     }
 
-        .modal-container.active .testimonials-modal {
+        .modal-container.active .skill-modal {
             transform: scale(1);
             opacity: 1;
         }
@@ -548,7 +548,7 @@ article { display: none; }
         pointer-events: all;
     }
 
-.testimonials-modal {
+.skill-modal {
     background: var(--eerie-black2);
     position: relative;
     padding: 15px;
@@ -1197,9 +1197,9 @@ textarea.form-input {
 
     .service-content-box { text-align: left; }
 
-    .testimonials-title { margin-bottom: 25px; }
+    .skill-title { margin-bottom: 25px; }
 
-    .testimonials-list {
+    .skill-list {
         gap: 30px;
         margin: 0 -30px;
         padding: 30px;
@@ -1211,26 +1211,26 @@ textarea.form-input {
         padding-top: 25px;
     }
 
-    .testimonials-avatar-box {
+    .skill-avatar-box {
         transform: translate(30px, -30px);
         border-radius: 28px;
     }
 
-        .testimonials-avatar-box img { width: 80px; }
+        .skill-avatar-box img { width: 80px; }
 
-    .testimonials-item-title {
+    .skill-item-title {
         margin-bottom: 10px;
         margin-left: 95px;
     }
 
-    .testimonials-text {
+    .skill-text {
         line-clamp: 2;
         -webkit-line-clamp: 2;
     }
 
     .modal-container {padding: 20px; }
 
-    .testimonials-modal {
+    .skill-modal {
         display: flex;
         justify-content: flex-start;
         align-items: stretch;
@@ -1322,7 +1322,7 @@ textarea.form-input {
 
     .navbar-link { --fs8: 15px; }
 
-    .testimonials-modal {
+    .skill-modal {
         gap: 35px;
         max-width: 680px;
     }
@@ -1406,7 +1406,7 @@ textarea.form-input {
         gap: 20px 25px;
     }
 
-    .testimonials-item { min-width: calc(50% - 15px); }
+    .skill-item { min-width: calc(50% - 15px); }
 
     .modal-img-wrapper > img { top: 20px; }
 

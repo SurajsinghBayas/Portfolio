@@ -621,25 +621,26 @@
           </main>
         
     </main>
+    
     <script>
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
             alert('Right-click is disabled on this website.');
         });
         document.addEventListener('keydown', function(e) {
-        // Prevent F12
-        if (e.key === 'F12') {
-            e.preventDefault();
-        }
-        // Prevent Ctrl+Shift+I
-        if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-            e.preventDefault();
-        }
-        // Prevent Ctrl+U
-        if (e.ctrlKey && e.key === 'u') {
-            e.preventDefault();
-        }
-    });
+            // Prevent F12
+            if (e.key === 'F12') {
+                e.preventDefault();
+            }
+            // Prevent Ctrl+Shift+I
+            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+                e.preventDefault();
+            }
+            // Prevent Ctrl+U
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+            }
+        });
     </script>
     
     <script src="script.js"></script>

@@ -856,7 +856,27 @@ article { display: none; }
     }
 
 /*BLOG*/
+.playlist-container{
 
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: top;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.playlist-item{
+    background: hsla(240, 35%, 82%, 0.75);
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: var(--shadow2);
+    z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth animation */
+    
+    margin-bottom: 20px;
+}
 .blog-posts { margin-bottom: 10px; }
 
 .blog-posts-list {

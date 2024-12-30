@@ -98,6 +98,7 @@
                     <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
                     <li class="navbar-item"><button class="navbar-link" data-nav-link>Resume</button></li>
                     <li class="navbar-item"><button class="navbar-link" data-nav-link>Portfolio</button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Playlist</button></li>
                     <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
                 </ul>
             </nav>
@@ -579,7 +580,25 @@
                     </ul>
                 </section>
             </article>
-
+<article class="playlist" data-page="playlist">
+                <header>
+                    <h2 class="h2 article-title"> playlist<h2>
+                </header>
+                <section class="playlist-container">
+                    <div class="playlist-item">
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/55lz0FgsbiS57PcmYuSAfQ?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                    <div class="playlist-item">
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5aJlhDebcXNLCdwTnLEz9A?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                    <div class="playlist-item">
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO4gTUOY?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                    <div class="playlist-item">
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7ejRRenJ7se7Ba6aMKjlA3?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                </section>
+                </article>
 
             <article class="contact" data-page="contact">
                 <header>
@@ -622,26 +641,7 @@
     <audio id="audio" src="https://assets.mixkit.co/sfx/2021/06/03/1810/short-notification-alert-tone.mp3"></audio>
     </main>
     
-    <script>
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-            alert('Right-click is disabled on this website.');
-        });
-        document.addEventListener('keydown', function(e) {
-            // Prevent F12
-            if (e.key === 'F12') {
-                e.preventDefault();
-            }
-            // Prevent Ctrl+Shift+I
-            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-                e.preventDefault();
-            }
-            // Prevent Ctrl+U
-            if (e.ctrlKey && e.key === 'u') {
-                e.preventDefault();
-            }
-        });
-    </script>
+
     
     <script src="script.js"></script>
 

@@ -1088,6 +1088,7 @@ textarea.form-input {
 .contact-item ion-icon {
     margin-right: 0px;
 }
+
 /*MEDIA QUERIES*/
 @media (min-width: 100px) {
     .skill-item-title {

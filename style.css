@@ -54,24 +54,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-.has-scrollbar::-webkit-scrollbar {
-    width: 5px; /* Width of the scrollbar */
-    height: 5px; /* Height of the horizontal scrollbar */
-}
 
-.has-scrollbar::-webkit-scrollbar-track {
-    background: var(--onyx); /* Background of the scrollbar track */
-    border-radius: 5px; /* Rounded corners for the track */
-}
-
-.has-scrollbar::-webkit-scrollbar-thumb {
-    background: var(--orange-yellow-crayola); /* Color of the scrollbar thumb */
-    border-radius: 5px; /* Rounded corners for the thumb */
-}
-
-.has-scrollbar::-webkit-scrollbar-button {
-    width: 5px; /* Width of the scrollbar buttons (if any) */
-}
 
 a {text-decoration: none; }
 

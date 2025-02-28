@@ -8,6 +8,8 @@
     <link rel="shortcut icon" href="/pictures/download.png" type="image/x-icon">
     <link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
     <script src="https://www.youtube.com/iframe_api"></script>
+    <meta http-equiv="Content-Security-Policy" content="frame-src 'self' https://www.youtube.com">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
 </head>
 
 <body>
@@ -106,7 +108,7 @@
             
             <!-- Add music button -->
             <button id="music-toggle" class="music-toggle">
-                <ion-icon name="musical-notes-outline" class="music-icon"></ion-icon>
+                <ion-icon name="musical-notes-outline"></ion-icon>
             </button>
         </div>
         <div class="main-content">

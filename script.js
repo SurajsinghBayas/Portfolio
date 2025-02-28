@@ -104,33 +104,58 @@ document.addEventListener('DOMContentLoaded', () => {
     let player;
     let isPlaying = false;
 
-    // Initialize YouTube Player
+    // Load YouTube IFrame API
+    function loadYouTubeAPI() {
+        const tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api';
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    }
+
+    // Initialize YouTube Player with security parameters
     window.onYouTubeIframeAPIReady = function() {
         player = new YT.Player('youtube-audio', {
             height: '0',
             width: '0',
-            videoId: 'CfPxlb8-ZQ0', // Your video ID
+            videoId: 'CfPxlb8-ZQ0',
             playerVars: {
                 'autoplay': 0,
                 'controls': 0,
+                'playsinline': 1,
+                'origin': window.location.origin,
+                'enablejsapi': 1,
+                'widget_referrer': window.location.href
             },
             events: {
                 'onReady': onPlayerReady,
+                'onError': onPlayerError
             }
         });
     };
 
     function onPlayerReady(event) {
         musicToggle.addEventListener('click', () => {
-            if (isPlaying) {
-                player.pauseVideo();
-                musicToggle.innerHTML = '<ion-icon name="musical-notes-outline"></ion-icon>';
-            } else {
-                player.playVideo();
-                musicToggle.innerHTML = '<ion-icon name="pause-outline"></ion-icon>';
+            try {
+                if (isPlaying) {
+                    player.pauseVideo();
+                    musicToggle.classList.remove('playing');
+                } else {
+                    player.playVideo();
+                    musicToggle.classList.add('playing');
+                }
+                isPlaying = !isPlaying;
+            } catch (error) {
+                console.error("Player interaction failed:", error);
             }
-            isPlaying = !isPlaying;
         });
     }
+
+    function onPlayerError(event) {
+        console.error("YouTube Player Error:", event.data);
+        // Fallback to alternate video or show error message
+    }
+
+    // Load YouTube API
+    loadYouTubeAPI();
 });
 

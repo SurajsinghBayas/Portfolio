@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="/pictures/download.png" type="image/x-icon">
     <link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
+    <script src="https://www.youtube.com/iframe_api"></script>
 </head>
 
 <body>
@@ -101,6 +102,11 @@
             <button id="theme-toggle" class="theme-toggle">
                 <ion-icon name="moon-outline" class="moon"></ion-icon>
                 <ion-icon name="sunny-outline" class="sun"></ion-icon>
+            </button>
+            
+            <!-- Add music button -->
+            <button id="music-toggle" class="music-toggle">
+                <ion-icon name="musical-notes-outline" class="music-icon"></ion-icon>
             </button>
         </div>
         <div class="main-content">
@@ -675,7 +681,8 @@
                 </div>
           </main>
   
-
+    <!-- Add this after your main content -->
+    <div id="youtube-audio"></div>
     
     <script src="script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

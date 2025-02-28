@@ -99,5 +99,38 @@ document.addEventListener('DOMContentLoaded', () => {
         htmlElement.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
     });
+
+    const musicToggle = document.getElementById('music-toggle');
+    let player;
+    let isPlaying = false;
+
+    // Initialize YouTube Player
+    window.onYouTubeIframeAPIReady = function() {
+        player = new YT.Player('youtube-audio', {
+            height: '0',
+            width: '0',
+            videoId: 'CfPxlb8-ZQ0', // Your video ID
+            playerVars: {
+                'autoplay': 0,
+                'controls': 0,
+            },
+            events: {
+                'onReady': onPlayerReady,
+            }
+        });
+    };
+
+    function onPlayerReady(event) {
+        musicToggle.addEventListener('click', () => {
+            if (isPlaying) {
+                player.pauseVideo();
+                musicToggle.innerHTML = '<ion-icon name="musical-notes-outline"></ion-icon>';
+            } else {
+                player.playVideo();
+                musicToggle.innerHTML = '<ion-icon name="pause-outline"></ion-icon>';
+            }
+            isPlaying = !isPlaying;
+        });
+    }
 });
 

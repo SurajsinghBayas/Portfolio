@@ -944,7 +944,7 @@ article { display: none; }
     .project-category {
         color: var(--light-gray70);
         font-size: var(--fs6);
-        font-weight: var(--fw300);
+        font-weight: var (--fw300);
     }
 
 /*BLOG*/
@@ -1622,7 +1622,7 @@ textarea.form-input {
 
 .theme-toggle {
     position: fixed;
-    top: 15px;
+    top: 37.8px;
     right: 15px;
     width: 40px;
     height: 40px;
@@ -1636,12 +1636,13 @@ textarea.form-input {
     font-size: 1.25rem;
     cursor: pointer;
     z-index: 999;
-    transition: all 0.3s ease;
-    box-shadow: var(--shadow2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: buttonFadeIn 0.5s ease-out;
 }
 
 .theme-toggle ion-icon {
-    font-size: 20px;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
 }
 
 .theme-toggle .sun {
@@ -1656,14 +1657,101 @@ textarea.form-input {
     display: none;
 }
 
+.theme-toggle:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 0 15px var(--orange-yellow-crayola);
+    border-color: var(--hover-color);
+}
+
+.theme-toggle:active {
+    transform: scale(0.95);
+}
+
+.theme-toggle:hover ion-icon {
+    transform: rotate(360deg);
+}
+
+.music-toggle {
+    position: fixed;
+    top: 95.6px; /* 2.5cm from top */
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    background: var(--eerie-black1);
+    border-radius: 50%;
+    border: 2px solid var(--orange-yellow-crayola);
+    color: var(--orange-yellow-crayola);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    cursor: pointer;
+    z-index: 999;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: buttonFadeIn 0.5s ease-out;
+}
+
+.music-toggle:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 0 15px var(--orange-yellow-crayola);
+    border-color: var(--hover-color);
+}
+
+.music-toggle:active {
+    transform: scale(0.95);
+}
+
+.music-toggle ion-icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.music-toggle:hover ion-icon {
+    transform: rotate(360deg);
+}
+
+/* Button entrance animation */
+@keyframes buttonFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Playing state animation for music button */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(235, 69, 95, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(235, 69, 95, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(235, 69, 95, 0);
+    }
+}
+
+/* Add this class when music is playing */
+.music-toggle.playing {
+    animation: pulse 2s infinite;
+    background: var(--orange-yellow-crayola);
+    color: var(--eerie-black1);
+}
+
 /* Add media queries for different screen sizes */
 @media (max-width: 580px) {
-    .theme-toggle {
-        top: 120px;
-        right: 10px;
+    .theme-toggle, .music-toggle {
         width: 35px;
         height: 35px;
         font-size: 1rem;
+    }
+    
+    .music-toggle {
+        top: 90px;
     }
 }
 

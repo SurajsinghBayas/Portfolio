@@ -83,4 +83,21 @@ for(let i = 0; i < navigationLinks.length; i++) {
     });
 }
 
-  
+// Theme switcher
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+    
+    // Remove any saved theme and set to dark by default
+    localStorage.removeItem('theme');
+    htmlElement.setAttribute('data-theme', 'dark');
+    
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = htmlElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        htmlElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+    });
+});
+

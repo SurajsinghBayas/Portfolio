@@ -62,6 +62,55 @@ li {list-style: none; }
 
 img, ion-icon, a, button, time, span { display: block; }
 
+.resumebutton {
+    width: auto;
+    height: 45px;
+    background-color: transparent;
+    padding: 10px 25px;
+    border: 2px solid var(--orange-yellow-crayola);
+    border-radius: 25px;
+    color: var(--orange-yellow-crayola);
+    font-weight: var(--fw500);
+    font-size: var(--fs6);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 6px 12px rgba(235, 69, 95, 0.1);
+}
+
+.resumebutton::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: var(--orange-yellow-crayola);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    z-index: -1;
+}
+
+.resumebutton:hover {
+    color: var(--eerie-black2);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(235, 69, 95, 0.2);
+}
+
+.resumebutton:hover::before {
+    width: 200%;
+    height: 200%;
+}
+
+.resumebutton:active {
+    transform: translateY(0);
+    box-shadow: 0 5px 10px rgba(235, 69, 95, 0.2);
+}
+
 button {
     font: inherit;
     background: none;
